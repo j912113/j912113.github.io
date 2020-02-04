@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>I'm Peggy</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" media="screen" href="https://static.codepen.io/assets/fullpage/fullpage-5685e76af3f282c94e211da3f3eb04396287d49fae7709088060651307b9d7a4.css" />
+
+	<style>
+
+   body{
+      background:#FFFAFA;
+    }
+
+:root {
+  --duration: 5s;
+  --ease: cubic-bezier(.6, 0, .2, 1);
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.digit {
+  stroke-width: 30;
+  -webkit-animation: var(--duration) var(--ease) both alternate infinite;
+          animation: var(--duration) var(--ease) both alternate infinite;
+  -webkit-animation-delay: calc( (var(--i) * 0.1s));
+          animation-delay: calc( (var(--i) * 0.1s));
+}
+.digit circle,
+.digit path {
+  -webkit-animation: inherit;
+          animation: inherit;
+  stroke: var(--color);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  /* Additional offsets for rounded stroke */
+  stroke-dashoffset: -1.2;
+  stroke-dasharray: 1 1.2;
+}
+.digit circle {
+  -webkit-animation-name: circle-draw;
+          animation-name: circle-draw;
+}
+@-webkit-keyframes circle-draw {
+  0%, 5% {
+    stroke-dasharray: 0 1.2 .2 .3;
+    stroke-dashoffset: 1.75;
+  }
+  18%, 50% {
+    stroke-dasharray: 1 1.1;
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: -1.1;
+  }
+}
+@keyframes circle-draw {
+  0%, 5% {
+    stroke-dasharray: 0 1.2 .2 .3;
+    stroke-dashoffset: 1.75;
+  }
+  18%, 50% {
+    stroke-dasharray: 1 1.1;
+    stroke-dashoffset: 0;
+  }
+  70%, 100% {
+    stroke-dashoffset: -1.1;
+  }
+}
+.digit path {
+  -webkit-animation-name: path-draw;
+          animation-name: path-draw;
+}
+@-webkit-keyframes path-draw {
+  0%, 43% {
+    stroke-dashoffset: 1.1;
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path-draw {
+  0%, 43% {
+    stroke-dashoffset: 1.1;
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+.digit {
+  -webkit-animation-name: digit;
+          animation-name: digit;
+}
+.digit:nth-child(1) {
+  --x-offset: 300%;
+}
+.digit:nth-child(2) {
+  --x-offset: 200%;
+}
+.digit:nth-child(3) {
+  --x-offset: 100%;
+}
+.digit:nth-child(4) {
+  --x-offset: 0%;
+}
+.digit:nth-child(5) {
+  --x-offset: -100%;
+}
+.digit:nth-child(6) {
+  --x-offset: -200%;
+}
+.digit:nth-child(7) {
+  --x-offset: -300%;
+}
+.digit:nth-child(even) {
+  --y-offset: calc(-25% + 2%);
+}
+.digit:nth-child(odd) {
+  --y-offset: calc(25% - 12%);
+}
+@-webkit-keyframes digit {
+  from, 15% {
+    -webkit-transform: translate(var(--x-offset, 0), var(--y-offset, 0));
+            transform: translate(var(--x-offset, 0), var(--y-offset, 0));
+  }
+  30% {
+    -webkit-transform: translate(0%, var(--y-offset));
+            transform: translate(0%, var(--y-offset));
+  }
+  45%, to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes digit {
+  from, 15% {
+    -webkit-transform: translate(var(--x-offset, 0), var(--y-offset, 0));
+            transform: translate(var(--x-offset, 0), var(--y-offset, 0));
+  }
+  30% {
+    -webkit-transform: translate(0%, var(--y-offset));
+            transform: translate(0%, var(--y-offset));
+  }
+  45%, to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+.digits {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+		.my-class{
+			padding: 15px;
+		}
+
+		.icona{
+			color:#FF0088;
+			font-size: 25px;
+		}
+    .peggy{
+      font-family:Comic Sans MS;
+    }
+
+    .photo-1{
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (max-width: 1028px) {}
+    @media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){}
+    
+
+
+</style>
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+ <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no">
+  <div class="digits">
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #5288E1; --i: 1">
+  <circle r="50" cx="50" cy="50" pathLength="1" />
+  <path pathLength="1" d="M0 0
+           L 25 200
+           L 50 0
+           L 75 200
+           L 100 0" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #3DA658; --i: 2">
+  <circle r="50" cx="50" cy="150" stroke="#F00" pathLength="1" />
+  <path pathLength="1" d="M 100 0
+           L 0 0
+           L 0 100
+           L 100 100
+           L 0 100
+           L 0 200
+           L 100 200" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #EFBE1B; --i: 3">
+  <circle r="50" cx="50" cy="50" pathLength="1" />
+  <path pathLength="1" d="M0 0
+           L 0 200
+           L 100 200
+           L 100 150" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #D7483D; --i: 4">
+  <circle r="50" cx="50" cy="150" pathLength="1" />
+  <path pathLength="1" d="M 100 150
+           C 100 200, 50 200, 50 200
+           C 0 200, 0 150, 0 150
+           L 0 50
+           C 0 0, 50 0, 50 0
+           C 100 0, 100 50, 100 50" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #EFBE1B; --i: 5">
+  <circle r="50" cx="50" cy="50" pathLength="1" />
+  <path pathLength="1" d="M100 150
+           C 100 200, 50 200, 50 200
+           C 0 200, 0 150, 0 150
+           L 0 50
+           C 0 0, 50 0, 50 0
+           C 100 0, 100 50, 100 50
+           L 100 150" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #3DA658; --i: 6">
+  <circle r="50" cx="50" cy="150" stroke="#F00" pathLength="1" />
+  <path pathLength="1" d="M 0 200
+           L 0 0
+           L 50 200
+           L 100 0
+           L 100 200" />
+  </svg>
+  <svg class="digit" viewBox="-20 -20 140 240" width="100" height="200" stroke-width="20" fill="none" style="--color: #5288E1; --i: 7">
+  <circle r="50" cx="50" cy="50" pathLength="1" />
+  <path pathLength="1" d="M100 0
+           L 0 0
+           L 0 100
+           L 100 100
+           L 0 100
+           L 0 200
+           L 100 200" />
+  </svg>
+  </div>
+    <nav class="navbar navbar-expand-lg navbar-light my-class fixed-top" style="background-color: #FFF;">
+      <div class="navbar-brand peggy" href="#"> <img  class= "photo-1"src="Photo/pg.png" alt=""> Peggy</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse ustify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav justify-content-end">
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="about me.html">About me</a>
+        <a class="nav-item nav-link" href="Story.html">Story</a>
+        <a class="nav-item nav-link" href="life.html">Life</a>
+        <a class="nav-item nav-link" href="SKill.html">Skill</a>
+        <a class="nav-item nav-link" href="Portfolio.html">Portfolio</a>
+      </div>
+    </div>
+    </nav>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
